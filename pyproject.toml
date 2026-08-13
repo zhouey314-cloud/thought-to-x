@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thought-to-x"
+version = "0.1.0"
+description = "Turn messy thoughts into human-sounding X posts."
+readme = "README_EN.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Thought-to-X contributors"}]
+dependencies = ["PyYAML>=6.0"]
+keywords = ["ai", "x", "twitter", "writing", "agent", "skill", "workflow"]
+
+[project.optional-dependencies]
+dev = []
+
+[project.scripts]
+thought-to-x = "thought_to_x.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

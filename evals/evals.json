@@ -1,0 +1,41 @@
+{
+  "skill_name": "thought-to-x",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "把这个零碎想法写成一条 X，保留我的不确定语气：每个人的命运可能出生时已经定好了，像电影一样，但这不是让人躺平，还是要问自己真正想要什么。",
+      "expected_output": "A reflective X post that preserves both uncertainty about destiny and agency without fabricating claims.",
+      "files": [],
+      "expectations": [
+        "Preserves uncertainty about whether destiny is predetermined",
+        "Preserves the tension between fate and active choice",
+        "Contains no invented facts, data, or personal history",
+        "Uses natural paragraphs rather than one-sentence-per-paragraph formatting"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "expand 成一条 X：AI 真正改变的可能不是知识获取，而是普通人第一次有了几乎无限执行力。不要编数据。",
+      "expected_output": "A restrained expansion of the supplied AI insight with no unsupported evidence or success clichés.",
+      "files": [],
+      "expectations": [
+        "Keeps the supplied claim as a possibility rather than a fact",
+        "Explains execution without invented statistics or anecdotes",
+        "Avoids motivational clichés and forced grandeur",
+        "Preserves the author's distinction between ideas and execution"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "把这段长话 distill 成一条 X：换工作不一定是公司不好，可能是自己变了。以前看重稳定，现在想做能长期积累的事。但我也不支持冲动辞职，应该先搞清楚自己想积累什么。final-only。",
+      "expected_output": "A concise final-only post preserving the career nuance and avoiding generic career advice.",
+      "files": [],
+      "expectations": [
+        "Preserves that changing jobs need not condemn the current company",
+        "Preserves the shift from stability toward long-term accumulation",
+        "Retains the boundary against impulsive resignation",
+        "Returns only a copy-ready post without process commentary"
+      ]
+    }
+  ]
+}

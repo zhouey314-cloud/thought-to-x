@@ -1,5 +1,9 @@
 # Thought to X
 
+[![CI](https://github.com/zhouey314-cloud/thought-to-x/actions/workflows/ci.yml/badge.svg)](https://github.com/zhouey314-cloud/thought-to-x/actions/workflows/ci.yml)
+
+![Thought to X workflow](docs/images/architecture.svg)
+
 > Turn messy thoughts into human-sounding X posts.
 
 我每天都会冒出很多想法。它们通常长这样：

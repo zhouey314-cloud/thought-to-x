@@ -1,12 +1,29 @@
-# Interview notes
+# Thought to X — 面试讲述卡
 
-1. **Why?** To make thought-to-x an inspectable, reusable portfolio artifact.
-2. **Hardest problem?** Preserving author intent during transformation.
-3. **Why this architecture?** Keep core workflow logic separate from UI and external providers.
-4. **Where is AI?** Read the README for the precise AI or prompt boundary; do not infer model quality from tests.
-5. **What stays human?** Domain truth, final review and external publishing decisions.
-6. **How verified?** Run the documented tests and inspect their actual assertions.
-7. **Failure learned?** Human stylistic judgment remains necessary.
-8. **Redo?** Add stronger, reviewed regression cases before claiming broader reliability.
-9. **Production scale?** Add authentication, observability, durable storage and verified integrations as relevant.
-10. **My contribution?** The public repository's code, documentation and tests; avoid claiming third-party or company work as original.
+## 60 秒
+
+我做这个自建项目是为了解决“把零散想法写成 X 内容时容易丢失作者原意”。用 Python CLI、模块化提示词、便携 Skill 做了先抽取观点、再组织结构/平台表达/去 AI 味；支持无 API Key 的 prompt-only 路线。最难的是流畅不等于忠实，必须把作者声音与发布决定交还给人。目前证据是离线 CLI 测试、可复现 prompt-only 命令与标注为示意的例子。但无自动 X 发布；示意 Before/After 不是人审质量基准；如果真实落地，下一步是授权作者样本、人审原意保留评分、隐私保护和回归集。
+
+## 3 分钟
+
+先演示核心路径：先抽取观点、再组织结构/平台表达/去 AI 味；支持无 API Key 的 prompt-only 路线。再打开仓库中的测试与案例页，解释为什么把状态/证据留在可检查的位置。重点讲一个取舍：流畅不等于忠实，必须把作者声音与发布决定交还给人。最后明确验证范围：离线 CLI 测试、可复现 prompt-only 命令与标注为示意的例子；没有独立人审写作质量指标，提供的是工作流与离线测试。不把演示、合成样本和生产效果混为一谈。
+
+## 10 分钟技术深挖
+
+1. 展示 README 的 Quick Start 与架构图/目录。
+2. 从一个输入走到状态变化或输出，指出 先抽取观点、再组织结构/平台表达/去 AI 味；支持无 API Key 的 prompt-only 路线 对应的源代码。
+3. 现场说明最难问题：流畅不等于忠实，必须把作者声音与发布决定交还给人；对照测试或复现步骤。
+4. 解释失败路径及限制：无自动 X 发布；示意 Before/After 不是人审质量基准。
+5. 用 授权作者样本、人审原意保留评分、隐私保护和回归集 说明真正上线的优先级和验收证据。
+
+## 九个常见追问
+
+1. **为什么这样设计架构？** 为了把 先抽取观点、再组织结构/平台表达/去 AI 味；支持无 API Key 的 prompt-only 路线 的核心规则与展示/外部依赖分开，便于检查失败边界。
+2. **最难的 bug/取舍？** 流畅不等于忠实，必须把作者声音与发布决定交还给人；请指向对应测试或演示复现，避免编造线上事故。
+3. **用了什么框架？** Python CLI、模块化提示词、便携 Skill。选型服务于静态或离线演示，不等同生产选型结论。
+4. **上线还差什么？** 授权作者样本、人审原意保留评分、隐私保护和回归集。
+5. **如何防止误用？** 无自动 X 发布；示意 Before/After 不是人审质量基准；任何不可逆外部动作需人工确认。
+6. **怎么测试？** 离线 CLI 测试、可复现 prompt-only 命令与标注为示意的例子。先跑 README 命令，再看具体断言，不把 200 或编译当成产品验收。
+7. **AI 在哪里？** 没有独立人审写作质量指标，提供的是工作流与离线测试。不要把确定性规则、提示词或可选模型接口说成已验证的 AI 效果。
+8. **哪些是 Mock？** 无自动 X 发布；示意 Before/After 不是人审质量基准。
+9. **模型怎么评测？个人贡献是什么？** 没有独立人审写作质量指标，提供的是工作流与离线测试。我负责公开仓库里可见的实现、测试和说明；未核验的业务结果与第三方工作不纳入我的贡献。

@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/zhouey314-cloud/thought-to-x/actions/workflows/ci.yml/badge.svg)](https://github.com/zhouey314-cloud/thought-to-x/actions/workflows/ci.yml)
 
+![Illustrative before-workflow-after animation; not a live model run](docs/images/demo.gif)
+
 ![Thought to X workflow](docs/images/architecture.svg)
 
 > Turn messy thoughts into human-sounding X posts.

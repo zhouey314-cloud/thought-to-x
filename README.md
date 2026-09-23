@@ -1,5 +1,7 @@
 # Thought to X
 
+**LOCAL_RUNNABLE / HUMAN EDITORIAL REVIEW** · [Prompt-only quick start](#quick-start) · [Case study](docs/case-study.md) · [Resume bullets](docs/resume-bullets.md) · [Interview notes](docs/interview-notes.md)
+
 [![CI](https://github.com/zhouey314-cloud/thought-to-x/actions/workflows/ci.yml/badge.svg)](https://github.com/zhouey314-cloud/thought-to-x/actions/workflows/ci.yml)
 
 ![Illustrative before-workflow-after animation; not a live model run](docs/images/demo.gif)

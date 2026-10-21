@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import errno
 import sys
 from pathlib import Path
 
@@ -26,19 +27,25 @@ def read_input(value: str) -> str:
     if value == "-":
         return sys.stdin.read()
     path = Path(value)
-    return path.read_text(encoding="utf-8") if path.is_file() else value
+    try:
+        is_file = path.is_file()
+    except OSError as exc:
+        if exc.errno != errno.ENAMETOOLONG:
+            raise
+        return value
+    return path.read_text(encoding="utf-8") if is_file else value
 
 
 def main(argv: list[str] | None = None) -> None:
     args = build_parser().parse_args(argv)
-    request = PipelineRequest(
-        raw_thought=read_input(args.input),
-        mode=args.mode,
-        length=args.length,
-        output=args.output,
-        style_path=args.style,
-    )
     try:
+        request = PipelineRequest(
+            raw_thought=read_input(args.input),
+            mode=args.mode,
+            length=args.length,
+            output=args.output,
+            style_path=args.style,
+        )
         pipeline = ThoughtToXPipeline(provider=None if args.prompt_only else OpenAICompatibleProvider())
         if args.prompt_only:
             system, user = pipeline.build_prompts(request)

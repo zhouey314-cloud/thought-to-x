@@ -9,6 +9,7 @@ from typing import Literal
 
 from .config import load_style_profile
 from .providers.base import BaseProvider
+from .resources import default_resource_root
 
 Mode = Literal["polish", "rewrite", "expand", "distill"]
 Length = Literal["short", "medium", "long", "auto"]
@@ -41,7 +42,7 @@ class ThoughtToXPipeline:
 
     def __init__(self, provider: BaseProvider | None = None, project_root: Path | None = None) -> None:
         self.provider = provider
-        self.project_root = project_root or Path(__file__).resolve().parents[2]
+        self.project_root = project_root or default_resource_root()
 
     @property
     def stages(self) -> tuple[str, ...]:

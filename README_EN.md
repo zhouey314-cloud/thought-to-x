@@ -39,10 +39,12 @@ With ChatGPT or Claude, upload the repository or copy `prompts/master.md` and it
 With Python 3.11+:
 
 ```bash
-python -m pip install -e .
+python -m pip install .
 python -m thought_to_x input.txt --prompt-only
 thought-to-x "I have a half-formed idea..." --mode rewrite --length auto --output final-only --prompt-only
 ```
+
+A regular installation includes the default prompts and style profile and works outside the source checkout. Use `--style path/to/style.yaml` to supply your own profile.
 
 Prompt-only mode requires no API. To use an OpenAI-compatible endpoint, configure the variables shown in `.env.example` in your environment and omit `--prompt-only`.
 

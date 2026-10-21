@@ -19,5 +19,11 @@ dev = []
 [project.scripts]
 thought-to-x = "thought_to_x.cli:main"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+# Bundle the root skill assets without copying or changing their contents.
+# The data-only namespace is used after a non-editable wheel installation.
+[tool.setuptools]
+packages = ["thought_to_x", "thought_to_x.providers", "thought_to_x._resources"]
+package-dir = {"" = "src", "thought_to_x._resources" = "."}
+
+[tool.setuptools.package-data]
+"thought_to_x._resources" = ["prompts/*.md", "config/*.yaml"]

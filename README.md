@@ -85,10 +85,12 @@ Read SKILL.md. Keep my idea and voice, then turn this into an X post:
 Python 3.11+：
 
 ```bash
-python -m pip install -e .
+python -m pip install .
 python -m thought_to_x input.txt --prompt-only
 thought-to-x "我的一个想法……" --mode rewrite --length auto --output final-only --prompt-only
 ```
+
+普通安装会包含默认提示词和风格配置，可在源码目录外运行；用 `--style path/to/style.yaml` 指定自己的配置。
 
 `--prompt-only` 会组装完整工作流，不调用任何 API。连接 OpenAI-compatible API 时：
 

@@ -7,8 +7,10 @@ from typing import Any
 
 import yaml
 
+from .resources import default_resource_root
 
-DEFAULT_STYLE_PATH = Path(__file__).resolve().parents[2] / "config" / "style-profile.yaml"
+
+DEFAULT_STYLE_PATH = default_resource_root() / "config" / "style-profile.yaml"
 
 
 class ConfigError(ValueError):

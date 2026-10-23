@@ -18,4 +18,6 @@ jobs:
       - run: python -m compileall -q src
       - name: Check installed CLI outside the source checkout
         working-directory: ${{ runner.temp }}
-        run: thought-to-x "A tentative synthetic thought." --prompt-only
+        run: |
+          thought-to-x "A tentative synthetic thought." --prompt-only
+          python "$GITHUB_WORKSPACE/scripts/verify_installed_resources.py" "$GITHUB_WORKSPACE"

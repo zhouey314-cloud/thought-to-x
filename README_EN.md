@@ -48,6 +48,12 @@ A regular installation includes the default prompts and style profile and works 
 
 Prompt-only mode requires no API. To use an OpenAI-compatible endpoint, configure the variables shown in `.env.example` in your environment and omit `--prompt-only`.
 
+## Version and downloads
+
+Source and wheel metadata are **1.0.1**. Download the wheel, source and checksums from the [GitHub release](https://github.com/zhouey314-cloud/thought-to-x/releases/tag/v1.0.1). The historical v1.0.0 workflow tag retained Python package version 0.1.0; all historical tags remain intact. Future source, wheel and release versions advance together from 1.0.1. See [release details](docs/RELEASE_1.0.1.md).
+
+The wheel also includes the unchanged `SKILL.md`, workflow and example Markdown referenced by the portable skill. GitHub and Agensi are separate publication surfaces; this release does not mean the Agensi listing was updated. Real-provider editorial quality is NOT_RUN and human review remains required.
+
 ## Workflow
 
 Normalize → Extract Intent → Find Core Insight → Identify Tension → Build Argument → Preserve Voice → X Content Optimization → De-AI → Quality Review.
@@ -64,11 +70,11 @@ See [`examples/`](examples/) for full raw-to-final walkthroughs. The key test is
 
 ## Roadmap
 
-- v0.2 Personal writing memory
-- v0.3 Post performance feedback
-- v0.4 Multiple writing personas
-- v0.5 X draft integration
+- Planned: Personal writing memory
+- Planned: Post performance feedback
+- Planned: Multiple writing personas
+- Planned: X draft integration
 
-No auto-publishing in v0.1. The focus is the thought-processing system.
+No auto-publishing in the current version. The focus is the thought-processing system.
 
 Contributions are welcome; read [`CONTRIBUTING.md`](CONTRIBUTING.md). MIT License.

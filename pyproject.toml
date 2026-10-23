@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "thought-to-x"
-version = "0.1.0"
+version = "1.0.1"
 description = "Turn messy thoughts into human-sounding X posts."
 readme = "README_EN.md"
 requires-python = ">=3.11"
@@ -26,4 +26,4 @@ packages = ["thought_to_x", "thought_to_x.providers", "thought_to_x._resources"]
 package-dir = {"" = "src", "thought_to_x._resources" = "."}
 
 [tool.setuptools.package-data]
-"thought_to_x._resources" = ["prompts/*.md", "config/*.yaml"]
+"thought_to_x._resources" = ["SKILL.md", "prompts/*.md", "config/*.yaml", "workflows/*.md", "examples/*.md"]

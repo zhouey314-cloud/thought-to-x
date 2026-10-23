@@ -80,12 +80,20 @@ Read SKILL.md. Keep my idea and voice, then turn this into an X post:
 
 复制 [`prompts/master.md`](prompts/master.md) 和它引用的模块提示词到对话中，再附上原始想法。也可以直接上传整个仓库，让模型读取 `SKILL.md`。
 
+## 版本与下载
+
+当前源码和安装包统一为 **1.0.1**：[GitHub Release](https://github.com/zhouey314-cloud/thought-to-x/releases/tag/v1.0.1)。历史 `v1.0.0` 是 2026-09-23 的工作流发布标签，当时 Python 包仍标为 `0.1.0`；历史标签保留，后续新版本从 1.0.1 递增并同步源码、wheel 与标签。详见 [发行记录](docs/RELEASE_1.0.1.md)。
+
+GitHub 发行与 Agensi listing 分别维护；此版不代表 Agensi 已更新。安装 wheel 后，`SKILL.md`、提示词、风格配置及引用的工作流/示例 Markdown 均随包提供。未运行真实模型质量评测，输出仍需人工编辑审阅。
+
 ## CLI
 
 Python 3.11+：
 
 ```bash
 python -m pip install .
+# 或下载 Release 的 wheel 后：
+# python -m pip install ./thought_to_x-1.0.1-py3-none-any.whl
 python -m thought_to_x input.txt --prompt-only
 thought-to-x "我的一个想法……" --mode rewrite --length auto --output final-only --prompt-only
 ```
@@ -152,12 +160,12 @@ Normalize → Extract Intent → Find Core Insight → Identify Tension
 
 ## Roadmap
 
-- **v0.2** — Personal writing memory
-- **v0.3** — Post performance feedback
-- **v0.4** — Multiple writing personas
-- **v0.5** — X draft integration
+- Personal writing memory（计划中，尚未实现）
+- Post performance feedback（计划中，尚未实现）
+- Multiple writing personas（计划中，尚未实现）
+- X draft integration（计划中，尚未实现）
 
-v0.1 不自动发布 X，先把思想加工系统做好。
+当前版本不自动发布 X，先把思想加工系统做好。
 
 ## Contributing
 
@@ -169,4 +177,4 @@ v0.1 不自动发布 X，先把思想加工系统做好。
 
 **Topics:** `ai` `x` `twitter` `writing` `ai-writing` `skill` `agent` `workflow` `content-creation` `prompt-engineering` `creator-tools`
 
-MIT License · v0.1.0
+MIT License · v1.0.1

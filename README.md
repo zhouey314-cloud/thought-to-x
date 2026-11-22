@@ -1,5 +1,9 @@
 # Thought to X
 
+把一段随手记、转写或半成品观点，整理成一篇仍像你写的 X 草稿。先确认原来的主张、立场和不确定性，再改结构和表达；不替作者补经历、编数据或发布。
+
+[两分钟试用](#quick-start) · [看一份从原话到成稿的例子](examples/destiny-example.md) · [English](README_EN.md)
+
 **LOCAL_RUNNABLE / HUMAN EDITORIAL REVIEW** · [Prompt-only quick start](#quick-start) · [Case study](docs/case-study.md) · [Resume bullets](docs/resume-bullets.md) · [Interview notes](docs/interview-notes.md)
 
 [![CI](https://github.com/zhouey314-cloud/thought-to-x/actions/workflows/ci.yml/badge.svg)](https://github.com/zhouey314-cloud/thought-to-x/actions/workflows/ci.yml)
@@ -58,7 +62,11 @@ Your Post
 
 ## Quick Start
 
-这个仓库首先是 **Portable AI Skill**，其次才是 CLI 软件。完全不需要 API Key 也有价值。
+这个仓库首先是 **Portable AI Skill**，其次才是 CLI 软件。
+
+- **先看结果：** 打开[完整示例](examples/destiny-example.md)，对照 RAW、FINAL 和 Fidelity note。原文的“可能”保留，电影比喻仍来自原文。
+- **让自己的助手试一段：** 按下文把 `SKILL.md` 给你选择的助手，先用不含隐私的素材。Skill 不要求项目 API key，但助手使用什么服务、如何处理输入，取决于你选的工具。
+- **只在本机组装：** [CLI](#cli) 的 `--prompt-only` 生成提示词包，不请求模型，也不输出已写好的推文。拿到实际草稿后，发布前核对有没有改变立场、新增事实或虚构经历。
 
 ### 1. Codex
 
@@ -84,7 +92,7 @@ Read SKILL.md. Keep my idea and voice, then turn this into an X post:
 
 当前源码和安装包统一为 **1.0.1**：[GitHub Release](https://github.com/zhouey314-cloud/thought-to-x/releases/tag/v1.0.1)。历史 `v1.0.0` 是 2026-09-23 的工作流发布标签，当时 Python 包仍标为 `0.1.0`；历史标签保留，后续新版本从 1.0.1 递增并同步源码、wheel 与标签。详见 [发行记录](docs/RELEASE_1.0.1.md)。
 
-GitHub 发行与 Agensi listing 分别维护；此版不代表 Agensi 已更新。安装 wheel 后，`SKILL.md`、提示词、风格配置及引用的工作流/示例 Markdown 均随包提供。未运行真实模型质量评测，输出仍需人工编辑审阅。
+GitHub 发行与 Agensi listing 分别维护；此版不代表 Agensi 已更新。安装 wheel 后，`SKILL.md`、提示词、风格配置及引用的工作流/示例 Markdown 均随包提供。[固定打包核验（`ca1455b`）](https://github.com/zhouey314-cloud/thought-to-x/actions/runs/39983451581) 检查安装后能在源码目录之外组装 prompt 并核对随包资源；未运行真实模型质量评测，输出仍需人工编辑审阅。
 
 ## CLI
 
